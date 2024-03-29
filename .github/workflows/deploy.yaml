@@ -39,4 +39,4 @@ jobs:
       - name: Build projects
         run: pnpm build
       - name: Deploy to firebase
-        run: pnpm deploy
+        run: pnpm run deploy
