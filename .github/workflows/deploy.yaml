@@ -22,15 +22,12 @@ jobs:
         with:
           node-version: 20
           cache: 'pnpm'
-      - name: Create google service account file and env var
-        run: |
-          # decode the token into json and write to file, using base64 to not have to mess with the json format
-          echo "Creating file in $HOME/firebase.json"
-          echo "${{ secrets.GOOGLE_APPLICATION_CREDENTIALS_JSON_BASE64 }}" | base64 --decode > "$HOME/firebase.json"
 
-          # source the env with the path to the file
-          echo "Sourcing env GOOGLE_APPLICATION_CREDENTIALS=$HOME/firebase.json"
-          echo "GOOGLE_APPLICATION_CREDENTIALS=$HOME/firebase.json" >> $GITHUB_ENV
+      - name: Authenticate with Google Cloud
+        id: auth
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
 
       - name: Install
         run: pnpm install
@@ -38,5 +35,7 @@ jobs:
         uses: dtinth/setup-github-actions-caching-for-turbo@v1
       - name: Build projects
         run: pnpm build
-      - name: Deploy to firebase
+      - name: Deploy to Firebase
+        env:
+          GOOGLE_APPLICATION_CREDENTIALS: ${{ steps.auth.outputs.credentials_file_path }}
         run: pnpm run deploy
