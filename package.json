@@ -10,21 +10,20 @@
   "scripts": {
     "start": "turbo run dev emulators",
     "dev": "turbo run dev",
-    "build": "turbo run build",
     "emulators": "firebase emulators:start",
+    "build": "turbo run build",
     "deploy": "turbo run build --parallel && turbo run deploy --filter=web --filter=api",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
-    "firebase-tools": "^12.7.0",
+    "firebase-tools": "^13.6.0",
     "prettier": "^2.8.8",
     "turbo": "^1.13.0",
     "typescript": "^5.0.4"
   },
   "engines": {
-    "pnpm": ">=8",
-    "node": ">=20"
+    "node": "20"
   },
   "packageManager": "pnpm@8.15.5"
 }

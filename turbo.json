@@ -4,15 +4,15 @@
       "dependsOn": ["^build"],
       "outputs": ["dist/**"]
     },
+    "//#emulators": {
+      "dependsOn": ["^build"],
+      "cache": false,
+      "persistent": true
+    },
     "deploy": {
       "dependsOn": ["build"]
     },
     "lint": {},
-    "emulators": {
-      // long-running
-      "cache": false,
-      "persistent": true
-    },
     "dev": {
       // long-running
       "dependsOn": ["build"],

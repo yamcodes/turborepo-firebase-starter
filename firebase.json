@@ -1,6 +1,7 @@
 {
   "functions": {
-    "source": "apps/api/dist"
+    "source": "apps/api",
+    "predeploy": "pnpm build --filter api"
   },
   "hosting": {
     "public": "apps/web/dist",
