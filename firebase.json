@@ -3,8 +3,8 @@
     {
       "source": "apps/api",
       "predeploy": [
-        "pnpm --filter \"./$RESOURCE_DIR\" lint",
-        "pnpm --filter \"./$RESOURCE_DIR\" build"
+        "pnpm --filter api lint",
+        "pnpm --filter api build"
       ],
       "codebase": "default",
       "ignore": [

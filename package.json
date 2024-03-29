@@ -15,6 +15,7 @@
     "build": "turbo run build",
     "deploy": "turbo run build --parallel && turbo run deploy --filter=web --filter=api",
     "lint": "turbo run lint",
+    "lint:fix": "turbo run lint -- --fix",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "root:clean": "rimraf node_modules",
     "root:emulate": "firebase emulators:start"

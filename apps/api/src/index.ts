@@ -19,18 +19,15 @@
 // // });
 
 import { onRequest } from 'firebase-functions/v2/https';
-import Fastify, { FastifyPluginAsync } from 'fastify';
+import { fastify } from 'fastify';
 import { registerRoutes } from './utils';
 
-const fastify = Fastify({
+const app = fastify({
   logger: true,
 });
 
-const app: FastifyPluginAsync = async (request, reply) => {
-  await registerRoutes(fastify);
-  await fastify.ready();
-  fastify.server.emit('request', request, reply);
-};
-
-// @ts-ignore -- firebase functions typescript is set to only support express, but it actually supports fastify
-export const server = onRequest(app);
+export const server = onRequest(async (request, reply) => {
+  await registerRoutes(app);
+  await app.ready();
+  app.server.emit('request', request, reply);
+});
