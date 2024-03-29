@@ -1,6 +1,6 @@
 {
-  "name": "tsconfig",
-  "version": "0.0.0",
+  "name": "eslint-config-custom",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "clean": "rm -rf .turbo && rm -rf node_modules"

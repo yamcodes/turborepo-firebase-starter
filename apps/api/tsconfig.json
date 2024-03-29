@@ -1,19 +1,10 @@
 {
   "compilerOptions": {
-    "noImplicitReturns": true,
-    "noUnusedLocals": true,
-    "strict": true,
-    "lib": ["ES2021"],
-    "module": "ESNext",
-    "moduleResolution": "Node",
-    "target": "ES2020",
-    "outDir": "dist",
-    "resolveJsonModule": true,
-    "sourceMap": true,
-    "rootDir": "../../",
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   },
-  "compileOnSave": true,
-  "include": ["src"]
+  "extends": "tsconfig/base.json",
+  "include": ["."],
+  "exclude": ["dist", "build", "node_modules"]
 }

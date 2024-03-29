@@ -24,7 +24,9 @@
     "firebase-tools": "^13.6.0",
     "prettier": "^3.0.0",
     "turbo": "^1.13.0",
-    "typescript": "^5.0.4"
+    "typescript": "^5.0.4",
+    "eslint-config-custom": "workspace:*",
+    "tsconfig": "workspace:*"
   },
   "engines": {
     "node": "20"
