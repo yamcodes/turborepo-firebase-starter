@@ -10,7 +10,7 @@
     "clean": "rimraf node_modules"
   },
   "dependencies": {
-    "eslint-config-next": "^13.4.3",
+    "eslint-config-next": "^14.0.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-react": "^7.32.2"
   }
