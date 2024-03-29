@@ -8,8 +8,8 @@
   ],
   "type": "module",
   "scripts": {
-    "start": "concurrently npm:dev npm:emulators",
-    "dev": "turbo run dev --parallel",
+    "start": "turbo run dev emulators",
+    "dev": "turbo run dev",
     "build": "turbo run build",
     "emulators": "firebase emulators:start",
     "deploy": "turbo run build --parallel && turbo run deploy --filter=web --filter=api",
@@ -17,7 +17,6 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
-    "concurrently": "^8.0.1",
     "firebase-tools": "^12.7.0",
     "prettier": "^2.8.8",
     "turbo": "^1.10.16",

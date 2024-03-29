@@ -5,14 +5,19 @@
       "outputs": ["dist/**"]
     },
     "deploy": {
-      "dependsOn": ["^build"],
-      "outputs": []
+      "dependsOn": ["build"]
     },
-    "lint": {
-      "outputs": []
+    "lint": {},
+    "emulators": {
+      // long-running
+      "cache": false,
+      "persistent": true
     },
     "dev": {
-      "cache": false
+      // long-running
+      "dependsOn": ["build"],
+      "cache": false,
+      "persistent": true
     }
   }
 }
