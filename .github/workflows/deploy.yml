@@ -31,6 +31,6 @@ jobs:
       - name: Build projects
         run: pnpm build
       - name: Authenticate Firebase
-        run: pnpm exec firebase use --token "${{ secrets.FIREBASE_TOKEN }}" --project "${{ secrets.FIREBASE_PROJECT }}"
+        run: pnpm exec firebase use --add --token "${{ secrets.FIREBASE_TOKEN }}" --project "${{ secrets.FIREBASE_PROJECT }}"
       - name: Deploy to Firebase
         run: pnpm run deploy
