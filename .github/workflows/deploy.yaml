@@ -23,19 +23,13 @@ jobs:
           node-version: 20
           cache: 'pnpm'
 
-      - name: Authenticate with Google Cloud
-        id: auth
-        uses: google-github-actions/auth@v2
-        with:
-          credentials_json: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
-
       - name: Install
         run: pnpm install
       - name: Setup Turbo caching
         uses: dtinth/setup-github-actions-caching-for-turbo@v1
       - name: Build projects
         run: pnpm build
+      - name: Authenticate Firebase
+        run: firebase use --token "${{ secrets.FIREBASE_TOKEN }}" --project "${{ secrets.FIREBASE_PROJECT }}"
       - name: Deploy to Firebase
-        env:
-          GOOGLE_APPLICATION_CREDENTIALS: ${{ steps.auth.outputs.credentials_file_path }}
         run: pnpm run deploy
