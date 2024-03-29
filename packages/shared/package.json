@@ -10,5 +10,8 @@
   },
   "files": [
     "*"
-  ]
+  ],
+  "scripts": {
+    "clean": "rimraf node_modules"
+  }
 }

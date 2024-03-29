@@ -4,7 +4,7 @@
       "dependsOn": ["^build"],
       "outputs": ["dist/**"]
     },
-    "//#emulators": {
+    "//#root:emulate": {
       "dependsOn": ["^build"],
       "cache": false,
       "persistent": true
@@ -18,6 +18,12 @@
       "dependsOn": ["build"],
       "cache": false,
       "persistent": true
+    },
+    "clean": {
+      "cache": false
+    },
+    "//#root:clean": {
+      "cache": false
     }
   }
 }

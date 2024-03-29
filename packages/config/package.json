@@ -6,6 +6,9 @@
   "files": [
     "eslint-preset.js"
   ],
+  "scripts":{
+    "clean": "rimraf node_modules"
+  },
   "dependencies": {
     "eslint-config-next": "^13.4.3",
     "eslint-config-prettier": "^8.8.0",

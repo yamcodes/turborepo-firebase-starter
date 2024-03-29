@@ -10,11 +10,14 @@
   "scripts": {
     "start": "turbo run dev emulators",
     "dev": "turbo run dev",
-    "emulators": "firebase emulators:start",
+    "emulate": "turbo run root:emulate",
+    "clean": "turbo run root:clean clean",
     "build": "turbo run build",
     "deploy": "turbo run build --parallel && turbo run deploy --filter=web --filter=api",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "root:clean": "rimraf node_modules",
+    "root:emulate": "firebase emulators:start"
   },
   "devDependencies": {
     "firebase-tools": "^13.6.0",
