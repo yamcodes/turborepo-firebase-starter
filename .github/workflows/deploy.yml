@@ -11,6 +11,7 @@ env:
 
 jobs:
   build-and-deploy:
+    name: Build and deploy
     runs-on: 'ubuntu-latest'
     steps:
       - uses: actions/checkout@v4
@@ -30,6 +31,6 @@ jobs:
       - name: Build projects
         run: pnpm build
       - name: Authenticate Firebase
-        run: pnpm exec firebase-tools use --token "${{ secrets.FIREBASE_TOKEN }}" --project "${{ secrets.FIREBASE_PROJECT }}"
+        run: pnpm exec firebase use --token "${{ secrets.FIREBASE_TOKEN }}" --project "${{ secrets.FIREBASE_PROJECT }}"
       - name: Deploy to Firebase
         run: pnpm run deploy
