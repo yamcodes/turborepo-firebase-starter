@@ -18,11 +18,7 @@
     "rewrites": [
       {
         "source": "/api/**",
-        "function": {
-          "functionId": "server",
-          "region": "us-central1",
-          "pinTag": true
-        }
+        "function": "server"
       },
       {
         "source": "**",
