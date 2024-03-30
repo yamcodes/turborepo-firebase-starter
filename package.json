@@ -22,12 +22,12 @@
     "root:emulate": "firebase emulators:start"
   },
   "devDependencies": {
-    "firebase-tools": "^13.6.0",
-    "prettier": "^3.0.0",
-    "turbo": "^1.13.0",
-    "typescript": "^5.0.4",
     "eslint-config-custom": "workspace:*",
-    "tsconfig": "workspace:*"
+    "firebase-tools-with-isolate": "^13.4.0",
+    "prettier": "^3.0.0",
+    "tsconfig": "workspace:*",
+    "turbo": "^1.13.0",
+    "typescript": "^5.0.4"
   },
   "engines": {
     "node": "20"

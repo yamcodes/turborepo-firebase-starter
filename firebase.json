@@ -2,17 +2,15 @@
   "functions": [
     {
       "source": "apps/api",
-      "predeploy": [
-        "pnpm --filter api lint",
-        "pnpm --filter api build"
-      ],
+      "predeploy": ["pnpm --filter api lint", "pnpm --filter api build"],
       "codebase": "default",
       "ignore": [
         "node_modules",
         ".git",
         "firebase-debug.log",
         "firebase-debug.*.log"
-      ]
+      ],
+      "isolate": true
     }
   ],
   "hosting": {
