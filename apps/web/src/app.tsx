@@ -5,7 +5,7 @@ import './App.css';
 export const App = () => {
   const [data, setData] = useState({});
   useEffect(() => {
-    void fetch('/api/test')
+    void fetch('/api/legacy')
       .then((res) => res.json())
       .then((res) => {
         // TODO: we need a stronger contract with the backend
@@ -27,9 +27,7 @@ export const App = () => {
             <pre>{JSON.stringify(data, null, 2)}</pre>
           </div>
           <div style={{ textAlign: 'left' }}>
-            <p style={{ fontWeight: 'bold' }}>
-              From packages/shared (utilities)
-            </p>
+            <p style={{ fontWeight: 'bold' }}>From packages/utilities</p>
             <pre>{JSON.stringify(iLikeTurtles())}</pre>
           </div>
           <div style={{ textAlign: 'left' }}>
