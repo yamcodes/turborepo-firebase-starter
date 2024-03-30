@@ -9,7 +9,7 @@
   "type": "module",
   "scripts": {
     "start": "turbo run dev emulators",
-    "dev": "turbo run emulate dev",
+    "dev": "turbo run build && turbo run root:emulate dev",
     "clean": "turbo run root:clean clean",
     "build": "turbo run build",
     "deploy": "turbo run deploy",
@@ -17,10 +17,12 @@
     "lint:fix": "pnpm format && turbo run lint -- --fix",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "format:check": "prettier --check \"**/*.{ts,tsx,md}\"",
-    "root:clean": "rimraf node_modules"
+    "root:clean": "rimraf node_modules",
+    "root:emulate": "firebase emulators:start"
   },
   "devDependencies": {
     "eslint-config-custom": "workspace:*",
+    "firebase-tools-with-isolate": "^13.4.0",
     "prettier": "^3.0.0",
     "tsconfig": "workspace:*",
     "turbo": "^1.13.0",
