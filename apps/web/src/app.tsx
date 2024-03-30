@@ -27,16 +27,18 @@ export const App = () => {
             <pre>{JSON.stringify(data, null, 2)}</pre>
           </div>
           <div style={{ textAlign: 'left' }}>
-            <p style={{ fontWeight: 'bold' }}>From packages/utilities</p>
+            <p style={{ fontWeight: 'bold' }}>
+              From packages/utilities (utilities)
+            </p>
             <pre>{JSON.stringify(iLikeTurtles())}</pre>
           </div>
           <div style={{ textAlign: 'left' }}>
             <p style={{ fontWeight: 'bold' }}>Source code</p>
             <a
               style={{ color: 'lightblue' }}
-              href="https://github.com/yamcodes/turborepo-firebase-example"
+              href="https://github.com/yamcodes/turborepo-firebase-starter/tree/main/apps/web"
             >
-              https://github.com/yamcodes/turborepo-firebase-example
+              https://github.com/yamcodes/turborepo-firebase-starter/tree/main/apps/web
             </a>
           </div>
         </div>

@@ -20,6 +20,7 @@
 
 import { onRequest } from 'firebase-functions/v2/https';
 import { fastify } from 'fastify';
+import * as logger from 'firebase-functions/logger';
 import { registerRoutes, setContentTypeParser } from './utils';
 
 const app = fastify({
@@ -45,7 +46,8 @@ setContentTypeParser(
 
 registerRoutes(app);
 
-export const server = onRequest(async (request, reply) => {
+export const server = onRequest(async (request, response) => {
   await app.ready();
-  app.server.emit('request', request, reply);
+  logger.info('Hello logs!', { structuredData: true });
+  app.server.emit('request', request, response);
 });
