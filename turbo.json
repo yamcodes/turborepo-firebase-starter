@@ -18,6 +18,10 @@
     },
     "//#root:clean": {
       "cache": false
+    },
+    "//#root:emulate": {
+      "cache": false,
+      "persistent": true
     }
   }
 }

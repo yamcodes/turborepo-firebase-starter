@@ -33,12 +33,12 @@ export const App = () => {
             <pre>{JSON.stringify(iLikeTurtles())}</pre>
           </div>
           <div style={{ textAlign: 'left' }}>
-            <p style={{ fontWeight: 'bold' }}>Source code</p>
+            <p style={{ fontWeight: 'bold' }}>GitHub</p>
             <a
               style={{ color: 'lightblue' }}
-              href="https://github.com/yamcodes/turborepo-firebase-starter/tree/main/apps/web"
+              href="https://github.com/yamcodes/turborepo-firebase-starter"
             >
-              https://github.com/yamcodes/turborepo-firebase-starter/tree/main/apps/web
+              https://github.com/yamcodes/turborepo-firebase-starter
             </a>
           </div>
         </div>

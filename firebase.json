@@ -31,15 +31,12 @@
     ]
   },
   "emulators": {
-    "ui": {
-      "enabled": true
-    },
     "functions": {
       "port": 3001
     },
     "hosting": {
       "enabled": true,
-      "port": 3000
+      "port": 3002
     }
   }
 }
