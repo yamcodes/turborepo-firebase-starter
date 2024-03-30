@@ -16,7 +16,8 @@
     "skipLibCheck": true,
     "strict": true,
     "noUncheckedIndexedAccess": true,
-    "noImplicitAny": true
+    "noImplicitAny": true,
+    "noEmit": true
   },
   "exclude": ["node_modules"]
 }

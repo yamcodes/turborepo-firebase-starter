@@ -1,4 +1,4 @@
-import { iLikeTurtles } from '@acme/shared';
+import { iLikeTurtles } from 'utilities';
 import { faker } from '@faker-js/faker';
 import { type FastifyInstance, type FastifyRequest } from 'fastify';
 

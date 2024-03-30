@@ -1,5 +1,5 @@
 {
-  "name": "@acme/api",
+  "name": "api",
   "version": "1.0.0",
   "files": [
     "dist"
@@ -28,7 +28,7 @@
   },
   "main": "dist/index.js",
   "dependencies": {
-    "@acme/shared": "workspace:*",
+    "utilities": "workspace:*",
     "@faker-js/faker": "^8.0.1",
     "express": "^4.18.2",
     "fastify": "^4.26.2",
