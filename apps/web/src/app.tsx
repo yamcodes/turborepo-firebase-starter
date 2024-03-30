@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react';
 import { iLikeTurtles } from 'utilities';
-
 import './App.css';
 
-const App = () => {
+export const App = () => {
   const [data, setData] = useState({});
   useEffect(() => {
     void fetch('/api/test')
@@ -47,5 +46,3 @@ const App = () => {
     </div>
   );
 };
-
-export default App;
