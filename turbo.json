@@ -4,17 +4,11 @@
       "dependsOn": ["^build"],
       "outputs": ["dist/**"]
     },
-    "//#root:emulate": {
-      "dependsOn": ["^build"],
-      "cache": false,
-      "persistent": true
-    },
     "deploy": {
       "dependsOn": ["build"]
     },
     "lint": {},
     "dev": {
-      // long-running
       "dependsOn": ["build"],
       "cache": false,
       "persistent": true

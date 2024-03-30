@@ -10,16 +10,15 @@
   "scripts": {
     "start": "turbo run dev emulators",
     "dev": "turbo run dev",
-    "emulate": "turbo run root:emulate",
+    "emulate": "turbo run build && firebase emulators:start",
     "clean": "turbo run root:clean clean",
     "build": "turbo run build",
-    "deploy": "turbo run build --parallel && turbo run deploy --filter=web --filter=api",
+    "deploy": "turbo run deploy",
     "lint": "pnpm format:check && turbo run lint",
     "lint:fix": "pnpm format && turbo run lint -- --fix",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "format:check": "prettier --check \"**/*.{ts,tsx,md}\"",
-    "root:clean": "rimraf node_modules",
-    "root:emulate": "firebase emulators:start"
+    "root:clean": "rimraf node_modules"
   },
   "devDependencies": {
     "eslint-config-custom": "workspace:*",

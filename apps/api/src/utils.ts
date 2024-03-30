@@ -1,27 +1,16 @@
 import { iLikeTurtles } from 'utilities';
 import { faker } from '@faker-js/faker';
-import { type FastifyInstance, type FastifyRequest } from 'fastify';
+import type { AddContentTypeParser, FastifyInstance } from 'fastify';
 
-export interface Request extends FastifyRequest {
-  /** The wire format representation of the request body. */
-  rawBody: Buffer;
-}
+export const setContentTypeParser = (
+  app: FastifyInstance,
+  ...[contentType, opts, parser]: Parameters<AddContentTypeParser>
+) => {
+  app.removeContentTypeParser(contentType);
+  app.addContentTypeParser(contentType, opts, parser);
+};
 
 export const registerRoutes = (fastify: FastifyInstance) => {
-  fastify.addContentTypeParser('application/json', {}, (req, payload, done) => {
-    // useful to include the request's raw body on the `req` object that will
-    // later be available in your other routes so you can calculate the HMAC
-    // if needed
-    // @ts-expect-error - taken from Fastify docs
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- taken from Fastify docs
-    req.rawBody = payload.rawBody;
-
-    // payload.body is already the parsed JSON so we just fire the done callback
-    // with it
-    // @ts-expect-error - taken from Fastify docs
-    done(null, payload.body);
-  });
-
   // define your endpoints here...
   fastify.post('/some-route-here', (_request) => {
     return { message: 'Hello World!!' };
