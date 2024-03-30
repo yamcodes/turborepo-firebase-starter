@@ -2,9 +2,9 @@
 
 This is an unofficial starter Turborepo.
 
-## Using this example
+### Who is this for?
 
-How to combine turborepo and firebase to have idempotent deployments from local and CI.
+You want to combine [turborepo](https://turborepo.org/) and [firebase](https://firebase.google.com/) to have idempotent deployments locally and in CI/CD.
 
 ## What's inside?
 
@@ -47,3 +47,7 @@ Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
 ```sh
   pnpm deploy
 ```
+
+## Special thanks
+
+[Hacksore](https://github.com/hacksore) for making [turborepo-firebase-example](https://github.com/hacksore/turborepo-firebase-example). This project is a fork that updates the toolkit to support [pnpm](https://pnpm.io/installation) and the [Vercel style guide](https://github.com/vercel/style-guide).
