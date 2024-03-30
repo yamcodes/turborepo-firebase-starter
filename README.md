@@ -1,6 +1,16 @@
-# Turborepo + Firebase
+# Turborepo Firebase starter
+
+This is an unofficial starter Turborepo.
+
+## Using this example
 
 How to combine turborepo and firebase to have idempotent deployments from local and CI.
+
+## What's inside?
+
+This Turborepo includes the following packages/apps:
+
+### Apps and packages
 
 ```
 ├── apps
@@ -8,13 +18,32 @@ How to combine turborepo and firebase to have idempotent deployments from local 
 │   └── web # the react+vite front end deployed to firebase hosting
 ```
 
+Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/en/download/)
+- [pnpm](https://pnpm.io/installation)
+- [Firebase CLI](https://firebase.google.com/docs/cli)
+- A [Firebase project](https://firebase.google.com/docs/projects/create)
+
+### Setup
+
+1. Edit `.firebaserc` and add your project's id
+2. Install dependencies
+
+```sh
+  pnpm i
 ```
-# install the deps
-npm install
 
-# to develop
-npm start
+### Develop
 
-# to deploy
-npm run deploy
+```sh
+  pnpm start
+```
+
+### Deploy
+
+```sh
+  pnpm deploy
 ```
