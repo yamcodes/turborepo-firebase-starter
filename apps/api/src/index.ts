@@ -21,7 +21,8 @@
 import { onRequest } from 'firebase-functions/v2/https';
 import { fastify } from 'fastify';
 import * as logger from 'firebase-functions/logger';
-import { registerRoutes, setContentTypeParser } from './utils';
+import { setContentTypeParser } from './utils';
+import { routes } from './routes';
 
 const app = fastify({
   logger: true,
@@ -44,7 +45,7 @@ setContentTypeParser(
   }
 );
 
-registerRoutes(app);
+void app.register(routes, { prefix: '/api' });
 
 export const server = onRequest(async (request, response) => {
   await app.ready();
