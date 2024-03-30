@@ -27,7 +27,7 @@ const app = fastify({
 });
 
 export const server = onRequest(async (request, reply) => {
-  await registerRoutes(app);
+  registerRoutes(app);
   await app.ready();
   app.server.emit('request', request, reply);
 });

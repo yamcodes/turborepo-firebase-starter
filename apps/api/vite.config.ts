@@ -1,7 +1,7 @@
+import { builtinModules } from 'node:module';
 import { defineConfig } from 'vite';
 import generatePackageJson from 'rollup-plugin-generate-package-json';
 import packageJson from './package.json' assert { type: 'json' };
-import { builtinModules } from 'node:module';
 
 // NOTE: the @acme/shared package cannot be included into the deps casue it will attempt to be installed in
 // the firebase function build step and fail, so as a work around we are using a bundler to move the code into the final bundle that we ship to firebase
@@ -12,6 +12,7 @@ import { builtinModules } from 'node:module';
 
 const external = [...builtinModules, ...builtinModules.map((m) => `node:${m}`)];
 
+// eslint-disable-next-line import/no-default-export -- vite config
 export default defineConfig({
   build: {
     ssr: './src/index.ts',
@@ -24,7 +25,7 @@ export default defineConfig({
       external,
       plugins: [
         generatePackageJson({
-          // @ts-ignore
+          // @ts-expect-error - vite config
           baseContents: packageJson,
         }),
       ],

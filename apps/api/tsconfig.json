@@ -4,7 +4,7 @@
       "@/*": ["./src/*"]
     }
   },
-  "extends": "tsconfig/base.json",
+  "extends": "tsconfig/functions.json",
   "include": ["."],
   "exclude": ["dist", "build", "node_modules"]
 }
