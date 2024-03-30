@@ -31,7 +31,7 @@ export const registerRoutes = (fastify: FastifyInstance) => {
 
   fastify.get('*', (_req, res) => {
     void res.send({
-      hello: 'world!',
+      hello: 'world!!!',
       randomName: faker.person.firstName(),
       iLikeTurtles: iLikeTurtles(),
       nice: 69,

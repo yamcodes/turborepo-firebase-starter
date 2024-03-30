@@ -1,8 +1,7 @@
 {
   "functions": [
     {
-      "source": "apps/api",
-      "codebase": "default",
+      "source": "../api",
       "ignore": [
         "node_modules",
         ".git",
@@ -27,9 +26,6 @@
     ]
   },
   "emulators": {
-    "functions": {
-      "port": 3001
-    },
     "hosting": {
       "enabled": true,
       "port": 3002

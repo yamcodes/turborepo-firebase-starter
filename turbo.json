@@ -13,15 +13,16 @@
       "cache": false,
       "persistent": true
     },
+    "emulate": {
+      "dependsOn": ["build"],
+      "cache": false,
+      "persistent": true
+    },
     "clean": {
       "cache": false
     },
     "//#root:clean": {
       "cache": false
-    },
-    "//#root:emulate": {
-      "cache": false,
-      "persistent": true
     }
   }
 }

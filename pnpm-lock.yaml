@@ -11,9 +11,6 @@ importers:
       eslint-config-custom:
         specifier: workspace:*
         version: link:packages/eslint-config-custom
-      firebase-tools-with-isolate:
-        specifier: ^13.4.0
-        version: 13.4.0
       prettier:
         specifier: ^3.0.0
         version: 3.2.5
@@ -72,6 +69,9 @@ importers:
       firebase-functions-test:
         specifier: ^3.1.0
         version: 3.1.1(firebase-admin@12.0.0)(firebase-functions@4.8.2)(jest@29.7.0)
+      firebase-tools-with-isolate:
+        specifier: ^13.4.0
+        version: 13.4.0
       rimraf:
         specifier: ^5.0.1
         version: 5.0.5
@@ -109,6 +109,9 @@ importers:
       eslint:
         specifier: ^8.41.0
         version: 8.57.0
+      firebase-tools-with-isolate:
+        specifier: ^13.4.0
+        version: 13.4.0
       vite:
         specifier: ^5.0.0
         version: 5.2.7
@@ -5188,7 +5191,7 @@ packages:
       google-auth-library: 7.14.1
       inquirer: 8.2.6
       inquirer-autocomplete-prompt: 2.0.1(inquirer@8.2.6)
-      isolate-package: 1.10.1
+      isolate-package: 1.11.0
       js-yaml: 3.14.1
       jsonwebtoken: 9.0.2
       leven: 3.1.0
@@ -6394,8 +6397,8 @@ packages:
     requiresBuild: true
     dev: true
 
-  /isolate-package@1.10.1:
-    resolution: {integrity: sha512-S7T/jZEQBqbYwG3hBlRvVRHId/0Faa2dJCaf3S8NgrgJtPTnBtnejl/9POpdkZn64PG8GbrVY9l07Aisy6oDlg==}
+  /isolate-package@1.11.0:
+    resolution: {integrity: sha512-3GGFHQ9pWVj1BC6dmM34s6mkovlmBakfyBAE00WwnYbCdzif71zx48GxdLV5gXh/E/hdrQwemNNMEqsetC73ZA==}
     hasBin: true
     dependencies:
       '@npmcli/arborist': 7.4.0
