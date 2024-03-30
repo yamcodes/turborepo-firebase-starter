@@ -45,12 +45,7 @@ setContentTypeParser(
 
 registerRoutes(app);
 
-export const server = onRequest(
-  {
-    region: 'asia-south1',
-  },
-  async (request, reply) => {
-    await app.ready();
-    app.server.emit('request', request, reply);
-  }
-);
+export const server = onRequest(async (request, reply) => {
+  await app.ready();
+  app.server.emit('request', request, reply);
+});
