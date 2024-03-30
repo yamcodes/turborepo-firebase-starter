@@ -109,6 +109,9 @@ importers:
       eslint:
         specifier: ^8.41.0
         version: 8.57.0
+      firebase-tools:
+        specifier: ^13.6.0
+        version: 13.6.0
       vite:
         specifier: ^5.0.0
         version: 5.2.7
@@ -5231,6 +5234,80 @@ packages:
       - utf-8-validate
     dev: true
 
+  /firebase-tools@13.6.0:
+    resolution: {integrity: sha512-BXXkFkw8FupINBJHd+aPFRKpvIf8R5P1GyOnWjwsk06kgXXdfFuuYctxkL8e82N4sUomdNP5Q/ru/u2esnoSQA==}
+    engines: {node: '>=18.0.0 || >=20.0.0'}
+    hasBin: true
+    dependencies:
+      '@google-cloud/pubsub': 3.7.5
+      abort-controller: 3.0.0
+      ajv: 6.12.6
+      archiver: 5.3.2
+      async-lock: 1.3.2
+      body-parser: 1.20.2
+      chokidar: 3.6.0
+      cjson: 0.3.3
+      cli-table: 0.3.11
+      colorette: 2.0.20
+      commander: 4.1.1
+      configstore: 5.0.1
+      cors: 2.8.5
+      cross-env: 5.2.1
+      cross-spawn: 7.0.3
+      csv-parse: 5.5.5
+      deep-equal-in-any-order: 2.0.6
+      exegesis: 4.1.2
+      exegesis-express: 4.0.0
+      express: 4.19.2
+      filesize: 6.4.0
+      form-data: 4.0.0
+      fs-extra: 10.1.0
+      fuzzy: 0.1.3
+      glob: 7.2.3
+      google-auth-library: 7.14.1
+      inquirer: 8.2.6
+      inquirer-autocomplete-prompt: 2.0.1(inquirer@8.2.6)
+      js-yaml: 3.14.1
+      jsonwebtoken: 9.0.2
+      leven: 3.1.0
+      libsodium-wrappers: 0.7.13
+      lodash: 4.17.21
+      marked: 4.3.0
+      marked-terminal: 5.2.0(marked@4.3.0)
+      mime: 2.6.0
+      minimatch: 3.1.2
+      morgan: 1.10.0
+      node-fetch: 2.7.0
+      open: 6.4.0
+      ora: 5.4.1
+      p-limit: 3.1.0
+      portfinder: 1.0.32
+      progress: 2.0.3
+      proxy-agent: 6.4.0
+      retry: 0.13.1
+      rimraf: 3.0.2
+      semver: 7.6.0
+      stream-chain: 2.2.5
+      stream-json: 1.8.0
+      strip-ansi: 6.0.1
+      superstatic: 9.0.3
+      tar: 6.2.1
+      tcp-port-used: 1.0.2
+      tmp: 0.2.3
+      triple-beam: 1.4.1
+      universal-analytics: 0.5.3
+      update-notifier-cjs: 5.1.6
+      uuid: 8.3.2
+      winston: 3.13.0
+      winston-transport: 4.7.0
+      ws: 7.5.9
+    transitivePeerDependencies:
+      - bufferutil
+      - encoding
+      - supports-color
+      - utf-8-validate
+    dev: true
+
   /flat-cache@3.2.0:
     resolution: {integrity: sha512-CYcENa+FtcUKLmhhqyctpclsq7QF38pKjZHsGNiSQF5r4FtoKDWabFDl3hzaEQMvT1LHEysw5twgLvpYYb4vbw==}
     engines: {node: ^10.12.0 || >=12.0.0}
@@ -8550,7 +8627,7 @@ packages:
     resolution: {integrity: sha512-u0piLU+nCOHMgGjRbimiXmA9kM/L9EHh3zL81xCdp7m+Y2pHIsnmbdDoEDoAz5geaonNR6q6+yOPQs6n4T6sBQ==}
     engines: {node: '>= 14'}
     dependencies:
-      agent-base: 7.1.0
+      agent-base: 7.1.1
       debug: 4.3.4
       http-proxy-agent: 7.0.2
       https-proxy-agent: 7.0.4
